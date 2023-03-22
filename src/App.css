@@ -33,14 +33,6 @@
   }
 }
 
-body {
-  background-color: #a7cedc;
-  background-image: linear-gradient(
-    to bottom,
-    #a7cedc,
-    #f2f2f2
-  );
-}
 
 .card {
   padding: 2em;
