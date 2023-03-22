@@ -44,7 +44,7 @@ function App() {
 
     axios
       .get(url)
-      .then((response) => {
+      .then((response: any) => {
         const data = response.data;
 
         const weatherData: WeatherData = {
@@ -61,7 +61,7 @@ function App() {
 
         setWeather(weatherData as WeatherData);
       })
-      .catch((error) => {
+      .catch((error: any) => {
         console.error(error);
       });
   };
