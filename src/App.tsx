@@ -68,31 +68,29 @@ function App() {
 
   return (
     <div className="App">
-      <div className="container">
-        <h1>Previsão do tempo</h1>
-        <form onSubmit={handleFormSubmit}>
-          <input
-            type="text"
-            placeholder="Digite o nome da cidade"
-            value={city}
-            onChange={handleInputChange}
-          />
-          <button type="submit">Buscar</button>
-        </form>
-        {weather
-          ? weather && (
-              <div className="weather-data">
-                <h2>
-                  {weather.city}, {weather.region}, {weather.country}
-                </h2>
-                <p>Temperatura: {weather.temperature} °C</p>
-                <p>Condição: {weather.condition}</p>
-                <p>Vento: {weather.wind} km/h</p>
-                <p>Umidade: {weather.humidity}%</p>
-              </div>
-            )
-          : "Ainda sem busca"}
-      </div>
+      <h1>Previsão do tempo</h1>
+      <form onSubmit={handleFormSubmit}>
+        <input
+          type="text"
+          placeholder="Digite o nome da cidade"
+          value={city}
+          onChange={handleInputChange}
+        />
+        <button type="submit">Buscar</button>
+      </form>
+      {weather
+        ? weather && (
+            <div className="weather-data">
+              <h2>
+                {weather.city}, {weather.region}, {weather.country}
+              </h2>
+              <p>Temperatura: {weather.temperature} °C</p>
+              <p>Condição: {weather.condition}</p>
+              <p>Vento: {weather.wind} km/h</p>
+              <p>Umidade: {weather.humidity}%</p>
+            </div>
+          )
+        : "Ainda sem busca"}
     </div>
   );
 }
